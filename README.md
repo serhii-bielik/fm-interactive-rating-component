@@ -9,5 +9,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Screenshot
 
-![](./screenshot-desktop.png)
-![](./screenshot-mobile.png)
+![](./screenshot-desktop1.png)
+![](./screenshot-desktop2.png)
+![](./screenshot-mobile1.png)
+![](./screenshot-mobile2.png)
