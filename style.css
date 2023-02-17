@@ -106,12 +106,12 @@ body {
 .rating__area-input-design:hover,
 .rating__area-input-design:focus-within {
   color: var(--white);
-  background-color: var(--light-gray);
+  background-color: var(--orange);
 }
 
 .rating__area-input:checked + .rating__area-input-design {
   color: var(--white);
-  background-color: var(--orange);
+  background-color: var(--light-gray);
 }
 
 .rating__area-submit {
