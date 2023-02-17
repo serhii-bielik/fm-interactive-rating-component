@@ -164,3 +164,55 @@ body {
 .hidden {
   display: none;
 }
+
+@media (min-width: 600px) {
+  .rating {
+    border-radius: 2rem;
+    padding: 2rem;
+  }
+
+  .rating__icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  .rating__icon-img {
+    transform: scale(1);
+  }
+
+  .rating__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rating__text {
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .rating__area {
+    margin-bottom: 0.6rem;
+  }
+
+  .rating__area-input-design {
+    width: 3.2rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .rating__area-submit {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .rating__result_image {
+    transform: none;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  .rating__result {
+    font-size: 1rem;
+  }
+}
