@@ -12,9 +12,9 @@
   --white: #ffffff;
   --orange: #fb7413;
   --light-gray: #959eac;
-  --medium-gray: #7c8798;
-  --dark-blue: #252d37;
   --very-dark-blue: #121417;
+  --rating-item-bg: #262f38;
+  --rating-bg-gradient: linear-gradient(180deg, #1f2630, #171e28);
 }
 
 body {
@@ -23,4 +23,144 @@ body {
   font-weight: 400;
   color: var(--light-gray);
   background-color: var(--very-dark-blue);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.rating {
+  width: 90%;
+  max-width: 410px;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-image: var(--rating-bg-gradient);
+  overflow: hidden;
+}
+
+.rating__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 50%;
+  background-color: var(--rating-item-bg);
+}
+
+.rating__icon-img {
+  transform: scale(0.85);
+}
+
+.rating__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.rating__text {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Rating selector */
+
+.rating__area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating__area-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rating__area-input-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.8rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background-color: var(--rating-item-bg);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.rating__area-input-design:hover,
+.rating__area-input-design:focus-within {
+  color: var(--white);
+  background-color: var(--light-gray);
+}
+
+.rating__area-input:checked + .rating__area-input-design {
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.rating__area-submit {
+  width: 100%;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--white);
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.9rem 0 0.7rem 0;
+  margin: 1.5rem 0 1rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.rating__area-submit:hover,
+.rating__area-submit:focus-within {
+  color: var(--orange);
+  background-color: var(--white);
+}
+
+/* Rating Result State */
+
+.rating__state-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.rating__result_image {
+  transform: scale(0.9);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.rating__result {
+  font-size: 0.9rem;
+  color: var(--orange);
+  background-color: var(--rating-item-bg);
+  padding: 0.6rem 1rem 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
 }

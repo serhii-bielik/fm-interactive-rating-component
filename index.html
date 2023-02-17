@@ -1,40 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-</body>
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="rating">
+        <div class="rating__state-vote">
+          <div class="rating__icon">
+            <img src="./images/icon-star.svg" class="rating__icon-img" alt="" />
+          </div>
+          <div class="rating__title">How did we do?</div>
+          <p class="rating__text">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <form id="rating-form">
+            <div class="rating__area">
+              <label class="rating__area-label">
+                <input
+                  type="radio"
+                  class="rating__area-input"
+                  name="rating"
+                  value="1"
+                />
+                <div class="rating__area-input-design">1</div>
+              </label>
+              <label class="rating__area-label">
+                <input
+                  type="radio"
+                  class="rating__area-input"
+                  name="rating"
+                  value="2"
+                />
+                <div class="rating__area-input-design">2</div>
+              </label>
+              <label class="rating__area-label">
+                <input
+                  type="radio"
+                  class="rating__area-input"
+                  name="rating"
+                  value="3"
+                />
+                <div class="rating__area-input-design">3</div>
+              </label>
+              <label class="rating__area-label">
+                <input
+                  type="radio"
+                  class="rating__area-input"
+                  name="rating"
+                  value="4"
+                />
+                <div class="rating__area-input-design">4</div>
+              </label>
+              <label class="rating__area-label">
+                <input
+                  type="radio"
+                  class="rating__area-input"
+                  name="rating"
+                  value="5"
+                />
+                <div class="rating__area-input-design">5</div>
+              </label>
+            </div>
+            <button type="submit" class="rating__area-submit">Submit</button>
+          </form>
+        </div>
+        <div class="rating__state-result hidden">
+          <img
+            src="./images/illustration-thank-you.svg"
+            class="rating__result_image"
+            alt=""
+          />
+          <div class="rating__result">You selected <span>5</span> out of 5</div>
+          <div class="rating__title">Thank you!</div>
+          <p class="rating__text text-center">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
